@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    /* Logodan alınan renk paleti */
+    --bg-dark: #12131C;       /* Arka plan koyu lacivert/siyah */
+    --card-bg: #1E1F2E;       /* Kartların arka planı */
+    --primary-blue: #4F46E5;  /* Mavi */
+    --primary-purple: #7C3AED;/* Mor */
+    --accent-orange: #F97316; /* Turuncu vurgu */
+    --accent-yellow: #FBBF24; /* Sarı vurgu */
+    --text-light: #F8FAFC;    /* Ana metin beyazı */
+    --text-muted: #94A3B8;    /* Pasif metin gri */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    min-height: 100vh;
+}
+
+/* Tüm butonlar için ortak şık tasarım */
+button {
+    background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple));
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(124, 58, 237, 0.4);
+}
+
+button:disabled {
+    background: #334155;
+    color: #94A3B8;
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+
+/* Input (Girdi) alanları ortak tasarımı */
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: var(--text-light);
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: var(--primary-purple);
+}
